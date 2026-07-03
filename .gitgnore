@@ -1,0 +1,12 @@
+*
+
+
+!addon.c
+!hello.c
+!main.c
+!lib.c
+!main.c
+!binding.gyp
+!index.js
+!package.json
+!package-lock.json
