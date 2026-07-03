@@ -5,6 +5,16 @@ First run c code and using it in nodejs.
 
 run make start, the Makefile will automatically recompile any changes 
 
+
+in Linux/Ubuntu:
+sudo apt update && sudo apt install -y build-essential manpages-dev
+sudo apt install -y python3-dev
+
+in Windows:
+npm install --global windows-build-tools
+
+
+
 run in terminal:
 make clean
 make install
