@@ -52,4 +52,18 @@ console.log('Running koffi Node.js program...');
 const result2 = sum(40, 2);
 
 console.log(`Result2 koffi from C: ${result2}`); // Output: 42
+
+// set_name
+const set_name = lib.func('set_name', 'void', ['string'])
+
+set_name("Mostafa")
+
+// get_name
+const get_name = lib.func('get_name', 'string', [])
+
+const name = get_name()
+
+console.log("get_name from c in nodejs : ", name)
+
+
 //--------------------------------------------

@@ -4,7 +4,7 @@ First run c code and using it in nodejs.
 
 rm -f libmain.so & gcc -shared -o libmain.so -fPIC lib.c
 
-npx node-gyp configure build
+rm -f build -r & npx node-gyp configure build
 
 rm -f main & gcc main.c -o main
 
