@@ -1,13 +1,17 @@
+# Block everything by default
 *
-/node_modules/
 
-
-!addon.c
-!hello.c
-!main.c
-!lib.c
-!main.c
-!binding.gyp
-!index.js
+# Allow necessary project files
 !package.json
 !package-lock.json
+!index.js
+!binding.gyp
+
+# Allow all C/C++ source code files
+!*.c
+!*.h
+!*.cpp
+
+# Explicitly ignore dependency and build artifact folders
+/node_modules/
+/build/
