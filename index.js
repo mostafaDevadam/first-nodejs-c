@@ -58,6 +58,10 @@ const set_name = lib.func('set_name', 'void', ['string'])
 
 set_name("Mostafa")
 
+let name_buffer = Buffer.alloc(100)
+name_buffer.write("Alex", "utf-8")
+set_name(name_buffer)
+
 // get_name
 const get_name = lib.func('get_name', 'string', [])
 

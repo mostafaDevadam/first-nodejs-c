@@ -10,21 +10,3 @@ make clean
 make install
 make start
 
-
-run in terminal without make:
-
-rm -f libmain.so & gcc -shared -o libmain.so -fPIC lib.c
-
-rm -f build -r & npx node-gyp configure build
-
-rm -f main & gcc main.c -o main
-
-rm -f hello & gcc hello.c -o hello
-
-
-run in Terminal:
-
-npm install
-
-npm start
-
