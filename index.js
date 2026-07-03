@@ -10,7 +10,7 @@ exec('./hello', (error, stdout, stderr) => {
         return
     }
 
-    console.log(`C Output: ${stdout}`)
+    console.log(`\n C Output: ${stdout} \n`)
 })
 
 
@@ -22,9 +22,9 @@ exec('./main', (error, stdout, stderr) => {
     }
     const sum = parseInt(stdout.trim(), 10)
 
-    console.log(`C Output: ${sum}`)
-     console.log(`C Output: ${stdout}`)
-     console.log(`C Output: ${sum + 10}`)
+    console.log(`\n C Output: ${sum} \n`)
+     console.log(`\n C Output: ${stdout} \n`)
+     console.log(`\n C Output: ${sum + 10} \n`)
 })
 
 //------------------------------ 1
@@ -64,6 +64,32 @@ const get_name = lib.func('get_name', 'string', [])
 const name = get_name()
 
 console.log("get_name from c in nodejs : ", name)
+
+// set_person
+
+const Person = koffi.struct('Person', {
+    name: 'char[150]',
+    city: 'char[50]'
+})
+
+const set_person = lib.func('set_person', 'void', [Person])
+
+const input_user = {
+    name: "Adam",
+    city: "Kiel"
+}
+
+console.log("Sending Js object to c struct person...")
+
+set_person(input_user)
+
+// get_person
+
+const get_person = lib.func('get_person', Person, [])
+
+console.log("get_person:", get_person())
+
+
 
 
 //--------------------------------------------

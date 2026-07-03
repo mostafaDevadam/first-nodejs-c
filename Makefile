@@ -5,6 +5,14 @@ CFLAGS = -Wall -O2
 # Default target runs everything
 all: libmain.so addon main hello
 
+# Install project dependencies
+install:
+	npm install
+
+# Run the project application startup script
+start: all
+	npm start
+
 # Compile the pure C shared library for Koffi
 libmain.so: lib.c
 	rm -f libmain.so
@@ -31,4 +39,4 @@ clean:
 	rm -rf build
 
 # Declare targets that are commands rather than file outcomes
-.PHONY: all addon clean
+.PHONY: all addon clean install start
