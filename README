@@ -1,4 +1,6 @@
-First run c code and using it in nodejs
+
+It's simple code for displaying how to access C functions in nodejs using javascript.
+First run c code and using it in nodejs.
 
 rm -f libmain.so & gcc -shared -o libmain.so -fPIC lib.c
 
@@ -7,6 +9,8 @@ npx node-gyp configure build
 rm -f main & gcc main.c -o main
 
 rm -f hello & gcc hello.c -o hello
+
+
 
 npm install
 
